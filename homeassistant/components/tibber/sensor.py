@@ -353,6 +353,8 @@ class TibberSensorElPrice(TibberSensor):
             "off_peak_1": None,
             "peak": None,
             "off_peak_2": None,
+            "today": None,
+            "tomorrow": None
         }
         self._attr_icon = ICON
         self._attr_name = f"Electricity price {self._home_name}"
@@ -406,6 +408,10 @@ class TibberSensorElPrice(TibberSensor):
         self._attr_extra_state_attributes["estimated_annual_consumption"] = data[
             "meteringPointData"
         ]["estimatedAnnualConsumption"]
+        self._attr_extra_state_attributes["today"] = \
+            data["currentSubscription"]["priceInfo"]["today"]
+        self._attr_extra_state_attributes["tomorrow"] = \
+            data["currentSubscription"]["priceInfo"]["tomorrow"]
 
 
 class TibberDataSensor(TibberSensor, CoordinatorEntity["TibberDataCoordinator"]):
