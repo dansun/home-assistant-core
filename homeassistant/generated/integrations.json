@@ -5537,7 +5537,7 @@
     "suez_water": {
       "name": "Suez Water",
       "integration_type": "hub",
-      "config_flow": false,
+      "config_flow": true,
       "iot_class": "cloud_polling"
     },
     "sun": {
@@ -5685,6 +5685,12 @@
       "config_flow": true,
       "iot_class": "cloud_polling"
     },
+    "tailwind": {
+      "name": "Tailwind",
+      "integration_type": "device",
+      "config_flow": true,
+      "iot_class": "local_polling"
+    },
     "tami4": {
       "name": "Tami4 Edge / Edge+",
       "integration_type": "hub",
@@ -5801,6 +5807,12 @@
           "name": "Tesla Wall Connector"
         }
       }
+    },
+    "tessie": {
+      "name": "Tessie",
+      "integration_type": "hub",
+      "config_flow": true,
+      "iot_class": "cloud_polling"
     },
     "tfiac": {
       "name": "Tfiac",
@@ -6705,7 +6717,7 @@
       "iot_class": "local_polling"
     },
     "zamg": {
-      "name": "Zentralanstalt f\u00fcr Meteorologie und Geodynamik (ZAMG)",
+      "name": "GeoSphere Austria",
       "integration_type": "hub",
       "config_flow": true,
       "iot_class": "cloud_polling"
